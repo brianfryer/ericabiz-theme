@@ -104,7 +104,7 @@ section.focus {
     float: left;
     min-width: 550px;
     max-width: 898px;
-    margin: 30px 400px 0 30px;
+    margin: 0 400px 0 30px;
     border: 1px solid #B9C7CC;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -247,7 +247,7 @@ aside.shoulder {
     max-width: 380px;
 }
 .shoulder.with-promo {
-    top: 225px;
+    top: 314px;
 }
 .shoulder > section {
     max-width: 370px;
@@ -311,7 +311,7 @@ nav.primary {
     font-size: 80%;
 }
 .shoulder.with-promo > .primary {
-    top: -264px;
+    top: -353px;
 }
 .primary > ul > li {
     float: left;
@@ -457,29 +457,8 @@ a.btn:hover {
 }
 
 .promo {
-    height: 185px;
     max-width: 1270px;
-    margin: 30px 30px 10px 30px;
-}
-.promo > section {
-    padding: 10px 20px 16px;
-    border: 2px dotted #CDB380;
-    background-color: #fff;
-}
-.promo h3 {
-    margin: 0 0 15px;
-}
-.promo img {
-    padding: 3px;
-    border-radius: 3px;
-    border: 1px solid #CDB380;
-    background-color: #E8DDCB;
-}
-.promo p {
-    margin: 10px 0;
-}
-.promo > section p:last-of-type {
-    margin-bottom: 0;
+    margin: 30px;
 }
 
 .photo {
@@ -492,7 +471,7 @@ a.btn:hover {
 
 .subscribe {
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px 20px;
     color: #695129;
     line-height: 1;
     border-radius: 2px;
@@ -527,17 +506,31 @@ a.btn:hover {
     border-top: 2px dashed #DCAF41;
 }
 
+.promo .subscribe form > span {
+    float: left;
+    margin: 0 20px 0 0;
+}
+.promo .subscribe label {
+    margin-top: 0;
+}
+.promo .subscribe input[type=text] {
+    width: ;
+}
+.promo .subscribe .btn {
+    margin-top: 25px;
+}
+
 article > .subscribe {
     max-width: 500px;
     font-size: 80%;
 }
 article > .subscribe h1 {
-    margin: 0;
+    margin: 20px 0 0;
     color: #006084;
     font-family: 'Arvo', serif;
     font-size: 155%;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 article > .subscribe h2 {
     margin: 15px 0 20px;
@@ -698,6 +691,18 @@ section.categories {
     margin: 0 auto;
 }
 
-.cranky-ads-zone-2312 a:hover {
+a.cranky-ads-zone-300x250 {
+    border: none !important;
+}
+
+.cranky-ads-image-zone a:hover {
     border: none;
+}
+
+img.wp-smiley {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: none !important;
 }

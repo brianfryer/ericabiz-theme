@@ -23,7 +23,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     <!-- Stylesheet Links -->
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php echo get_stylesheet_directory_uri() . '/ericabiz-style.css' ?>" />
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php echo get_stylesheet_directory_uri() . '/style.css' ?>" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 

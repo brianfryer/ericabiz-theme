@@ -30,7 +30,7 @@ if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'promo',
         'name'          => 'Promo (just under header)',
-        'before_widget' => '<section>',
+        'before_widget' => '<section class="subscribe">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
