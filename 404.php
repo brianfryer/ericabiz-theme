@@ -1,18 +1,22 @@
 <?php get_header(); ?>
+<?php get_template_part( 'promo' ); ?>
 
-    <section class="focus four-oh-four page">
-        <?php get_template_part( 'branding' ); ?>
-        <article>
+    <section class="focus four-oh-four">
+
+        <article class="page">
+
             <header>
-                <h1><strong>404:</strong> Page Not Found</h1>
+                <h1 class="article-title"><strong>404:</strong> Page Not Found</h1>
             </header>
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("four-oh-four") ) : endif ?>
-        </article>
-        <div class="clearboth"></div>
-    </section><!--/.focus.four-oh-four.page-->
 
-    <aside class="shoulder">
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("four-oh-four") ) : endif ?>
+
+        </article><!--/.page-->
+
+    </section><!--/.focus.four-oh-four-->
+
+    <section class="shoulder">
         <?php get_sidebar(); ?>
-    </aside><!--/.shoulder-->
+    </section><!--/.shoulder-->
 
 <?php get_footer(); ?>

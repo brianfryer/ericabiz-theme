@@ -1,9 +1,7 @@
 <ul class="meta">
-<?php if ( is_single() ) { ?>
     <li>
         <a title="<?php the_permalink(); ?>" href="<?php the_permalink(); ?>">Permalink</a>
     </li>
-<?php } ?>
     <li>
         <span title="This post was was published on <?php the_date( 'D, M j, Y' ); ?>"><?php echo get_the_date( 'D, M j, Y' ); ?></span>
     </li>

@@ -1,20 +1,22 @@
 <?php get_header(); ?>
 
-    <section class="focus page">
-        <?php get_template_part( 'branding' ); ?>
+    <section class="focus">
+
         <?php the_post(); ?>
-        <article>
+        <article class="page">
+
             <header>
-                <h1><?php the_title(); ?></h1>
+                <h1 class="article-title"><?php the_title(); ?></h1>
             </header>
+
             <?php the_content() ?>
-            <div class="clearboth"></div>
-        </article>
-        <div class="clearboth"></div>
+
+        </article><!--/.page-->
+
     </section><!--/.focus-->
 
-    <aside class="shoulder">
+    <section class="shoulder">
         <?php get_sidebar(); ?>
-    </aside><!--/.shoulder-->
+    </section><!--/.shoulder-->
 
 <?php get_footer(); ?>

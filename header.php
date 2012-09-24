@@ -8,11 +8,13 @@
 <head profile="http://gmpg.org/xfn/11">
 
     <!-- Page Title -->
+    <title>
     <?php if (is_home() || is_front_page() ) { ?>
-    <title>Make Money Online with Successful Entrepreneur Erica Douglass (erica.biz)</title>
-    <?php } else { ?>
-    <title><?php echo the_title(); ?>, by Erica Douglass (erica.biz)</title>
+        Make Money Online with Successful Entrepreneur Erica Douglass (erica.biz)
+    <?php } else {
+        echo the_title(); ?>, by Erica Douglass (erica.biz)
     <?php } ?>
+    </title>
     
     <!-- Meta Data -->
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -23,7 +25,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     <!-- Stylesheet Links -->
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php echo get_stylesheet_directory_uri() . '/style.css' ?>" />
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php echo get_stylesheet_directory_uri() . '/css/ericabiz-style.css' ?>" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
@@ -48,6 +50,28 @@
 </head>
 <body>
 
-<div class="blue-bar"></div>
+    <header class="top">
+        <div class="wrapper">
 
-<div class="wrapper">
+            <div class="branding">
+                <?php get_template_part( 'branding' ); ?>
+            </div>
+
+            <nav class="primary">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary-nav',
+                        'container'      => FALSE,
+                        'container_id'   => FALSE,
+                        'menu_class'     => 'primary-nav',
+                        'menu_id'        => FALSE,
+                    )
+                );
+                ?>
+            </nav><!--/.primary-->
+
+        </div><!--/.wrapper-->
+    </header><!--/.top-->
+
+    <div class="wrapper">

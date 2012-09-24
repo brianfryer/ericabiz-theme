@@ -14,40 +14,40 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-// Register 'shoulder' widget ready area
+// Register 'shoulder' widget ready area (the sidebar)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'shoulder',
         'name'          => 'Shoulder (aka the sidebar)',
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
+        'before_widget' => '<article class="widget">',
+        'after_widget'  => '</article>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
     ));
 
-// Register 'promo' widget ready area
+// Register 'promo' widget ready area (below header)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'promo',
         'name'          => 'Promo (just under header)',
-        'before_widget' => '<section class="subscribe">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
     ));
 
-// Register 'promo' widget ready area
+// Register 'subscribe' widget ready area (below posts)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'subscribe',
         'name'          => 'Subscribe (bottom of posts)',
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
+        'before_widget' => '',
+        'after_widget'  => '',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
     ));
 
-// Register 'footer-ads' widget ready area
+// Register 'footer-ads' widget ready area (in footer)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'footer-ads',
@@ -58,7 +58,7 @@ if ( function_exists('register_sidebar') )
         'after_title'   => ''
     ));
 
-// Register 'categories' widget ready area
+// Register 'categories' widget ready area (in footer)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'categories',
@@ -69,15 +69,15 @@ if ( function_exists('register_sidebar') )
         'after_title'   => '</h3>'
     ));
 
-// Register 'four-oh-four' widget ready area
+// Register 'four-oh-four' widget ready area (body content under the h1)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'id'            => 'four-oh-four',
         'name'          => '404 Page Content',
-        'before_widget' => '<section>',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<header><h1>',
+        'after_title'   => '</h1></header>'
     ));
 
 // Allow HTML tags to be used in WP titles
@@ -94,8 +94,3 @@ add_filter( 'the_title', 'eb_convert_title_html_tags' );
 add_filter( 'the_title_rss', 'eb_convert_title_html_tags' );
 add_filter( 'wp_title', 'eb_convert_title_html_tags' );
 add_filter( 'widget_title', 'eb_convert_title_html_tags' );
-
-
-
-
-?>
