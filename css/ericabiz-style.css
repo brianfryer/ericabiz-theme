@@ -62,10 +62,22 @@ blockquote * {
   margin: 1em 0;
   line-height: 1.5; }
 
+hr {
+  zoom: 1;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px dotted #EBEFF1; }
+  hr:before, hr:after {
+    content: "";
+    display: table; }
+  hr:after {
+    clear: both; }
+
 /* ==========================================================================
    Structural elements
    ========================================================================== */
 div.wrapper {
+  padding: 0 20px;
   zoom: 1;
   max-width: 1320px;
   text-align: left;
@@ -80,30 +92,40 @@ div.wrapper {
 header.top {
   width: 100%;
   margin: 0 0 30px;
-  padding: 30px 0; }
+  padding: 10px 0; }
 
 div.branding {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 65.88078%;
+  width: 74.41059%;
   font-size: 80%; }
   div.branding:last-child {
     margin-right: 0; }
 
 nav.primary {
+  margin-top: 13px;
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 23.23176%;
+  font-size: 80%; }
   nav.primary:last-child {
     margin-right: 0; }
 
-section.promo {
-  margin: 30px 0;
+div.main-column {
   display: block;
   float: left;
   margin-right: 2.35765%;
+  width: 74.41059%; }
+  div.main-column:last-child {
+    margin-right: 0; }
+
+section.promo {
+  margin: 0 0 30px;
+  display: block;
+  float: left;
+  margin-right: 3.16844%;
   width: 100%;
   zoom: 1; }
   section.promo:last-child {
@@ -115,11 +137,10 @@ section.promo {
     clear: both; }
 
 section.focus {
-  margin: 30px 0;
   display: block;
   float: left;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
+  margin-right: 3.16844%;
+  width: 100%; }
   section.focus:last-child {
     margin-right: 0; }
 
@@ -127,18 +148,19 @@ section.subscribe {
   margin: 30px 0;
   display: block;
   float: left;
-  margin-right: 3.57866%;
-  width: 48.21067%;
+  margin-right: 3.16844%;
+  width: 54.14736%;
   margin-left: 17.05961%;
   font-size: 80%; }
   section.subscribe:last-child {
     margin-right: 0; }
 
 section.shoulder {
+  max-width: 380px;
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 23.23176%;
   margin-right: 0; }
   section.shoulder:last-child {
     margin-right: 0; }
@@ -148,7 +170,7 @@ footer.bottom {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 65.88078%;
+  width: 74.41059%;
   font-size: 80%; }
   footer.bottom:last-child {
     margin-right: 0; }
@@ -229,6 +251,18 @@ a.btn:hover {
   letter-spacing: 1px;
   text-transform: uppercase; }
 
+.yellow-box fieldset {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  min-width: 200px;
+  border: none; }
+  .yellow-box fieldset:last-child {
+    margin-right: 0; }
+  .yellow-box fieldset:nth-child(3n) {
+    margin-right: 0; }
+
 .yellow-box label {
   display: block;
   color: #A49066;
@@ -237,6 +271,7 @@ a.btn:hover {
   text-transform: uppercase; }
 
 .yellow-box input[type=text] {
+  width: 100%;
   padding: 6px;
   border-radius: 2px;
   border: 1px solid #CEB480;
@@ -268,26 +303,45 @@ header.top {
 div.branding a {
   border-bottom: none; }
 
-div.branding img {
-  padding: 0 4px 3px;
+span.logo {
+  float: left;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  line-height: 1; }
+
+span.logo > a {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  line-height: 1; }
+
+span.logo img {
   border-bottom: 2px solid transparent; }
 
-div.branding img:hover {
+span.logo img:hover {
   border-bottom: 2px dotted #EBD17C; }
 
 span.tagline {
   float: left;
-  margin: 8px 0 0 12px;
+  margin: 3px 0 0 12px;
   padding: 7px 0 7px 14px;
   color: #EBD17C;
   border-left: 1px dotted #EBD17C; }
 
-nav.primary > li {
+nav.primary li {
   float: left;
-  margin: 0 10px; }
+  margin: 0 0 0 3%; }
 
 nav.primary a:hover {
   color: #fff; }
+
+nav.primary > li:first-child {
+  margin-left: 0; }
 
 nav.primary > li:first-child > a:hover {
   border-bottom: none; }
@@ -327,6 +381,14 @@ section.focus > article {
   padding: 30px 30px 60px;
   border-bottom: 2px solid #5997AF;
   border-top: 2px solid #D9E1E4; }
+
+section.focus > article > header {
+  zoom: 1; }
+  section.focus > article > header:before, section.focus > article > header:after {
+    content: "";
+    display: table; }
+  section.focus > article > header:after {
+    clear: both; }
 
 h1.article-title {
   margin: 0;

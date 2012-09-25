@@ -69,52 +69,65 @@ blockquote * {
   line-height: 1.5;
 }
 
+hr {
+  @include clearfix;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px dotted #EBEFF1;
+}
+
+
 /* ==========================================================================
    Structural elements
    ========================================================================== */
 
 div.wrapper {
+  @include pad(0 20px);
   @include outer-container;
 }
 
 header.top {
   width: 100%;
   margin: 0 0 30px;
-  @include pad(30px 0);
+  @include pad(10px 0);
 }
   div.branding {
-    @include span-columns(8);
+    @include span-columns(9);
     font-size: 80%;
   }
   nav.primary {
-    @include span-columns(4);
+    margin-top: 13px;
+    @include span-columns(3);
+    font-size: 80%;
   }
 
-section.promo {
-  margin: 30px 0;
-  @include span-columns(12);
-  @include clearfix;
+div.main-column {
+  @include span-columns(9);
 }
-
-section.focus {
-  margin: 30px 0;
-  @include span-columns(8);
-}
+  section.promo {
+    margin: 0 0 30px;
+    @include span-columns(9 of 9);
+    @include clearfix;
+  }
+  section.focus {
+    @include span-columns(9 of 9);
+  }
   section.subscribe {
     margin: 30px 0;
-    @include span-columns(4 of 8);
-    @include shift(2);
+    @include span-columns(5 of 9);
+    @include shift(3);
     font-size: 80%;
   }
 
 section.shoulder {
-  @include span-columns(4);
+  max-width: 380px;
+  @include span-columns(3);
   @include omega();
 }
 
 footer.bottom {
   margin: 30px 0 0;
-  @include span-columns(8);
+  @include span-columns(9);
   font-size: 80%;
 }
 
@@ -197,7 +210,10 @@ a.btn:hover {
   text-transform: uppercase;
 }
 .yellow-box fieldset {
-
+  @include span-columns(2);
+  @include nth-omega(3n);
+  min-width: 200px;
+  border: none;
 }
 .yellow-box label {
   display: block;
@@ -207,7 +223,8 @@ a.btn:hover {
   text-transform: uppercase;
 }
 .yellow-box input[type=text] {
-  padding: 6px;
+  width: 100%;
+  @include pad(6px);
   border-radius: 2px;
   border: 1px solid #CEB480;
   color: #006084;
@@ -236,27 +253,38 @@ header.top {
 div.branding a {
   border-bottom: none;
 }
-div.branding img {
-  padding: 0 4px 3px;
+span.logo {
+  float: left;
+  @include inline-block;
+  line-height: 1;
+}
+span.logo > a {
+  @include inline-block;
+  line-height: 1;
+}
+span.logo img {
   border-bottom: 2px solid transparent;
 }
-div.branding img:hover {
+span.logo img:hover {
   border-bottom: 2px dotted #EBD17C;
 }
 span.tagline {
   float: left;
-  margin: 8px 0 0 12px;
+  margin: 3px 0 0 12px;
   padding: 7px 0 7px 14px;
   color: #EBD17C;
   border-left: 1px dotted #EBD17C;
 }
 
-nav.primary > li {
+nav.primary li {
   float: left;
-  margin: 0 10px;
+  margin: 0 0 0 3%;
 }
 nav.primary a:hover {
   color: #fff;
+}
+nav.primary > li:first-child {
+  margin-left: 0;
 }
 nav.primary > li:first-child > a:hover {
   border-bottom: none;
@@ -300,6 +328,9 @@ section.focus > article {
   padding: 30px 30px 60px;
   border-bottom: 2px solid #5997AF;
   border-top: 2px solid #D9E1E4;
+}
+section.focus > article > header {
+  @include clearfix;
 }
 h1.article-title {
   margin: 0;
