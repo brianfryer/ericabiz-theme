@@ -383,7 +383,6 @@ nav.primary span:hover {
 
 /* Main column styling */
 section.focus {
-  padding: 0 0 10px;
   border: 1px solid #B9C7CC;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -477,11 +476,13 @@ ul.meta > li.comments:before {
   border-top: 1px dashed #CCD7DB; }
 
 nav.back-and-forth {
-  margin-bottom: 10px;
   padding: 8px 15px;
   border-top: 2px solid #D9E1E4;
   font-size: 80%;
   font-style: italic; }
+
+nav.back-and-forth li {
+  margin-bottom: 15px; }
 
 nav.back-and-forth li:first-child {
   float: left; }
