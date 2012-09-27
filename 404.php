@@ -9,7 +9,7 @@
                 <header>
                     <h1 class="article-title"><strong>404:</strong> Page Not Found</h1>
                 </header>
-
+                <hr />
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("four-oh-four") ) : endif ?>
 
             </article><!--/.page-->

@@ -9,5 +9,5 @@
 
     <article class="widget">
         <h3>Sponsors</h3>
-        <?php if(function_exists('CrankyAdsZone')) { CrankyAdsZone(2324); } ?>
+        <?php if(function_exists('CrankyAdsZone')) { CrankyAdsZone(2384); } ?>
     </article>

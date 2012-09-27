@@ -17,7 +17,7 @@
                 <aside class="subscribe yellow-box">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("subscribe") ) : endif ?>
                 </aside><!--/.subscribe.yellow-box-->
-
+                <hr />
                 <aside class="da-google-adz">
                     <span>
                         <script type="text/javascript"><!--
