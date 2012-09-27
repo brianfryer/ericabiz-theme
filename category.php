@@ -1,48 +1,51 @@
 <?php get_header(); ?>
-<?php get_template_part( 'promo' ); ?>
 
-    <section class="focus category loop">
+    <div class="main-column">
+        <?php get_template_part( 'promo' ); ?>
 
-        <header>
-            <h1 class="section-title">Posts published in the <strong><em><?php single_cat_title(); ?></em></strong> category:</h1>
-        </header>
-
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <article class="post snippet">
+        <section class="focus category loop">
 
             <header>
-                <h1 class="article-title">
-                    <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </h1>
-                <?php get_template_part( 'post', 'meta' ); ?>
+                <h1 class="section-title">Posts published in the <strong><em><?php single_cat_title(); ?></em></strong> category:</h1>
             </header>
 
-            <?php the_content() ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article class="post snippet">
 
-            <span class="full-post">
-                <a class="btn" title="<?php the_title(); ?>" href="<?php the_permalink();?>">View full post &raquo;</a>
-            </span>
+                <header>
+                    <h1 class="article-title">
+                        <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h1>
+                    <?php get_template_part( 'post', 'meta' ); ?>
+                </header>
 
-        </article><!--/.post.snippet-->
-    <?php endwhile; else: ?>
-        <article class="post snippet">
+                <?php the_content() ?>
 
-            <p><?php _e('Sorry, there are no posts in this category.'); ?></p>
+                <span class="full-post">
+                    <a class="btn" title="<?php the_title(); ?>" href="<?php the_permalink();?>">View full post &raquo;</a>
+                </span>
 
-        </article><!--/.post.snippet-->
-    <?php endif; ?>
+            </article><!--/.post.snippet-->
+        <?php endwhile; else: ?>
+            <article class="post snippet">
 
-        <nav class="back-and-forth">
-            <ul>
-                <li><?php next_posts_link('&laquo; Previous Posts'); ?></li>
-                <li><?php previous_posts_link('Newer Posts &raquo;'); ?></li>
-            </ul>
-        </nav><!--/.back-and-forth-->
+                <h2><?php _e('Sorry, there are no posts in this category.'); ?></h2>
 
-    </section><!--/.focus.category.loop-->
+            </article><!--/.post.snippet-->
+        <?php endif; ?>
 
-    <section class="shoulder with-promo">
+            <nav class="back-and-forth">
+                <ul>
+                    <li><?php next_posts_link('&laquo; Previous Posts'); ?></li>
+                    <li><?php previous_posts_link('Newer Posts &raquo;'); ?></li>
+                </ul>
+            </nav><!--/.back-and-forth-->
+
+        </section><!--/.focus.category.loop-->
+        </div><!--/.main-column-->
+
+    <section class="shoulder">
         <?php get_sidebar(); ?>
-    </section><!--/.shoulder.with-promo-->
+    </section><!--/.shoulder-->
 
 <?php get_footer(); ?>

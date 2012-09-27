@@ -52,7 +52,7 @@ a:hover {
 
 blockquote {
   margin: 15px 30px;
-  @include pad(0 60px);
+  @include pad(1px 60px);
   border-radius: 3px;
   border-bottom: 1px solid #CCD7DB;
   color: #4E6067;
@@ -82,8 +82,8 @@ hr {
    ========================================================================== */
 
 div.wrapper {
-  @include pad(0 20px);
   @include outer-container;
+  @include pad(0 20px);
 }
 
 header.top {
@@ -92,42 +92,50 @@ header.top {
   @include pad(10px 0);
 }
   div.branding {
-    @include span-columns(9);
+    float: left;
+    /*@include span-columns(9);*/
     font-size: 80%;
   }
   nav.primary {
+    float: right;
+    /*@include span-columns(3);*/
+    width: 320px;
     margin-top: 13px;
-    @include span-columns(3);
     font-size: 80%;
+  }
+  nav.primary > ul {
+    float: right;
   }
 
 div.main-column {
-  @include span-columns(9);
+  @include span-columns(8);
 }
   section.promo {
     margin: 0 0 30px;
-    @include span-columns(9 of 9);
+    @include span-columns(8 of 8);
     @include clearfix;
   }
   section.focus {
-    @include span-columns(9 of 9);
+    @include span-columns(8 of 8);
   }
   section.subscribe {
     margin: 30px 0;
-    @include span-columns(5 of 9);
-    @include shift(3);
+    @include span-columns(4 of 8);
+    @include shift(2);
+    @include clearfix;
     font-size: 80%;
   }
 
 section.shoulder {
   max-width: 380px;
-  @include span-columns(3);
+  @include span-columns(4);
   @include omega();
 }
 
 footer.bottom {
   margin: 30px 0 0;
-  @include span-columns(9);
+  @include pad(0 0 20px);
+  @include span-columns(8);
   font-size: 80%;
 }
 
@@ -210,15 +218,16 @@ a.btn:hover {
   text-transform: uppercase;
 }
 .yellow-box fieldset {
-  @include span-columns(2);
+  @include span-columns(2.5 of 8);
   @include nth-omega(3n);
-  min-width: 200px;
+  min-width: 170px;
   border: none;
 }
 .yellow-box label {
   display: block;
   color: #A49066;
   font-family: 'Arvo', serif;
+  font-size: 80%;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -228,7 +237,6 @@ a.btn:hover {
   border-radius: 2px;
   border: 1px solid #CEB480;
   color: #006084;
-  font-size: 110%;
   font-weight: bold;
   @include box-shadow(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2));
 }
@@ -240,6 +248,25 @@ a.btn:hover {
   @include clearfix;
   border: none;
   border-top: 2px dashed #DCAF41;
+}
+.yellow-box fieldset:last-of-type {
+  padding-top: 27px;
+}
+.yellow-box .btn {
+  padding: 8px
+}
+
+.subscribe h3 {
+  text-align: center;
+}
+.subscribe img {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+.subscribe form {
+  margin-top: 20px;
 }
 
 
@@ -278,16 +305,16 @@ span.tagline {
 
 nav.primary li {
   float: left;
-  margin: 0 0 0 3%;
+  margin: 0 0 0 15px;
+}
+nav.primary li:first-child {
+  margin-left: 0;
+}
+nav.primary li:first-child > a:hover {
+  border-bottom: none;
 }
 nav.primary a:hover {
   color: #fff;
-}
-nav.primary > li:first-child {
-  margin-left: 0;
-}
-nav.primary > li:first-child > a:hover {
-  border-bottom: none;
 }
 nav.primary span {
   display: inline-block;
@@ -308,6 +335,7 @@ nav.primary span:hover {
 /* Main column styling */
 
 section.focus {
+  @include pad(0 0 10px);
   border: 1px solid #B9C7CC;
   background-color: #fff;
   @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.2));
@@ -402,17 +430,16 @@ ul.meta > li.comments:before {
 }
 
 nav.back-and-forth {
+  margin-bottom: 10px;
+  @include pad(8px 15px);
   border-top: 2px solid #D9E1E4;
   font-size: 80%;
   font-style: italic;
 }
-nav.back-and-forth > li {
-  margin: 0 0 15px;
-}
-nav.back-and-forth > li:first-child {
+nav.back-and-forth li:first-child {
   float: left;
 }
-nav.back-and-forth > li:last-child {
+nav.back-and-forth li:last-child {
   float: right;
 }
 
@@ -420,6 +447,7 @@ nav.back-and-forth > li:last-child {
 /* Sidebar styling */
 
 .widget {
+  @include clearfix;
   margin: 0 0 10px;
   @include pad(0 0 5px 10px);
   color: #666;
@@ -494,7 +522,7 @@ nav.back-and-forth > li:last-child {
 
 section.categories {
   margin: 30px 0 0;
-  padding: 10px 9px;
+  padding: 0 9px 10px;
   border-radius: 2px;
   border: 1px solid #D3C0A2;
   background-color: #E8DDCB;
@@ -570,7 +598,8 @@ nav.secondary li {
 }
 
 .da-google-adz {
-  margin: 20px;
+  margin: 5px 0 20px;
+  @include clearfix;
 }
 .da-google-adz > span {
   display: table;

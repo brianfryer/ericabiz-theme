@@ -1,19 +1,21 @@
 <?php get_header(); ?>
 
-    <section class="focus">
+    <div class="main-column">
+        <section class="focus">
 
-        <?php the_post(); ?>
-        <article class="page">
+            <?php the_post(); ?>
+            <article class="page">
 
-            <header>
-                <h1 class="article-title"><?php the_title(); ?></h1>
-            </header>
+                <header>
+                    <h1 class="article-title"><?php the_title(); ?></h1>
+                </header>
+                <hr />
+                <?php the_content() ?>
 
-            <?php the_content() ?>
+            </article><!--/.page-->
 
-        </article><!--/.page-->
-
-    </section><!--/.focus-->
+        </section><!--/.focus-->
+    </div><!--/.main-column-->
 
     <section class="shoulder">
         <?php get_sidebar(); ?>
