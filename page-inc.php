@@ -20,7 +20,7 @@ Template Name: As seen in Inc. Magazine
                     <h1 class="article-title"><?php the_title(); ?></h1>
                 </header>
                 <hr />
-                <?php the_content() ?>
+                <?php the_content(); ?>
 
             </article><!--/.page-->
 

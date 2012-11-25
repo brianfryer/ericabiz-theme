@@ -14,17 +14,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-// Register 'shoulder' widget ready area (the sidebar)
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-        'id'            => 'shoulder',
-        'name'          => 'Shoulder (aka the sidebar)',
-        'before_widget' => '<article class="widget">',
-        'after_widget'  => '</article>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
-    ));
-
 // Register 'promo' widget ready area (below header)
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
