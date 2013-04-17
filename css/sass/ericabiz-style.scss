@@ -220,10 +220,12 @@ a.btn:hover {
 .yellow-box fieldset {
   @include span-columns(2.5 of 8);
   @include nth-omega(3n);
-  min-width: 170px;
+  //min-width: 170px;
   border: none;
 }
 .yellow-box label {
+  cursor: default;
+  white-space: nowrap;
   display: block;
   color: #A49066;
   font-family: 'Arvo', serif;
@@ -249,8 +251,8 @@ a.btn:hover {
   border: none;
   border-top: 2px dashed #DCAF41;
 }
-.yellow-box fieldset:last-of-type {
-  padding-top: 27px;
+.promo .yellow-box fieldset:last-child {
+  padding: 27px 0 0 0 !important;
 }
 .yellow-box .btn {
   padding: 8px

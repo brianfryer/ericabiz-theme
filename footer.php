@@ -39,5 +39,7 @@
 
 <?php wp_footer(); ?>
 
+    <script type="text/javascript" src="http://analytics.aweber.com/js/awt_analytics.js?id=4IsS"></script>;
+
 </body>
 </html>

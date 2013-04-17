@@ -3,6 +3,14 @@
 // Allow shortcodes to be used in widgets
 add_filter('widget_text', 'do_shortcode');
 
+add_shortcode('blogurl', 'blogUrl');
+add_shortcode('pageurl', 'blogUrl');
+
+function blogUrl() {
+    $url = get_permalink($post->ID);
+    return $url;
+}
+
 // Register Header and Footer navigation menus
 function register_my_menus() {
     register_nav_menus(
@@ -13,6 +21,17 @@ function register_my_menus() {
     );
 }
 add_action( 'init', 'register_my_menus' );
+
+// Register 'shoulder' widget ready area (the sidebar)
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'id'            => 'shoulder',
+        'name'          => 'Shoulder (aka the sidebar)',
+        'before_widget' => '<article class="widget">',
+        'after_widget'  => '</article>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ));
 
 // Register 'promo' widget ready area (below header)
 if ( function_exists('register_sidebar') )

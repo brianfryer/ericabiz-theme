@@ -245,8 +245,8 @@ a.btn:hover {
   border-radius: 2px;
   border: 1px solid #CEB480;
   background-color: #F6E9C0;
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: compact(0 1px 5px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 1px 5px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
 
 .yellow-box h2, .yellow-box h3 {
   color: #006084;
@@ -259,7 +259,6 @@ a.btn:hover {
   float: left;
   margin-right: 3.57866%;
   width: 28.78967%;
-  min-width: 170px;
   border: none; }
   .yellow-box fieldset:last-child {
     margin-right: 0; }
@@ -267,6 +266,8 @@ a.btn:hover {
     margin-right: 0; }
 
 .yellow-box label {
+  cursor: default;
+  white-space: nowrap;
   display: block;
   color: #A49066;
   font-family: 'Arvo', serif;
@@ -281,8 +282,8 @@ a.btn:hover {
   border: 1px solid #CEB480;
   color: #006084;
   font-weight: bold;
-  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: compact(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
 
 .yellow-box input[type=text]:focus {
   border: 1px solid #C39502; }
@@ -298,8 +299,8 @@ a.btn:hover {
   .yellow-box hr:after {
     clear: both; }
 
-.yellow-box fieldset:last-of-type {
-  padding-top: 27px; }
+.promo .yellow-box fieldset:last-child {
+  padding: 27px 0 0 0 !important; }
 
 .yellow-box .btn {
   padding: 8px; }
@@ -385,8 +386,8 @@ nav.primary span:hover {
 section.focus {
   border: 1px solid #B9C7CC;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: compact(0 0 10px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 0 10px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
 
 section.focus > header {
   padding: 0 30px;
