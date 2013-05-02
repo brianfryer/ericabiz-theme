@@ -63,12 +63,12 @@ blockquote * {
   line-height: 1.5; }
 
 hr {
-  zoom: 1;
+  *zoom: 1;
   margin: 10px 0;
   border: none;
   border-bottom: 1px dotted #EBEFF1; }
   hr:before, hr:after {
-    content: "";
+    content: " ";
     display: table; }
   hr:after {
     clear: both; }
@@ -77,14 +77,13 @@ hr {
    Structural elements
    ========================================================================== */
 div.wrapper {
-  zoom: 1;
+  *zoom: 1;
   max-width: 1280px;
-  text-align: left;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px; }
   div.wrapper:before, div.wrapper:after {
-    content: "";
+    content: " ";
     display: table; }
   div.wrapper:after {
     clear: both; }
@@ -101,7 +100,6 @@ div.branding {
 
 nav.primary {
   float: right;
-  /*@include span-columns(3);*/
   margin-top: 13px;
   font-size: 80%; }
 
@@ -122,11 +120,11 @@ section.promo {
   float: left;
   margin-right: 3.57866%;
   width: 100%;
-  zoom: 1; }
+  *zoom: 1; }
   section.promo:last-child {
     margin-right: 0; }
   section.promo:before, section.promo:after {
-    content: "";
+    content: " ";
     display: table; }
   section.promo:after {
     clear: both; }
@@ -145,13 +143,13 @@ section.subscribe {
   float: left;
   margin-right: 3.57866%;
   width: 48.21067%;
-  margin-left: 17.05961%;
-  zoom: 1;
+  margin-left: 25.89467%;
+  *zoom: 1;
   font-size: 80%; }
   section.subscribe:last-child {
     margin-right: 0; }
   section.subscribe:before, section.subscribe:after {
-    content: "";
+    content: " ";
     display: table; }
   section.subscribe:after {
     clear: both; }
@@ -244,8 +242,7 @@ a.btn:hover {
   border-radius: 2px;
   border: 1px solid #CEB480;
   background-color: #F6E9C0;
-  -webkit-box-shadow: compact(0 1px 5px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
-  box-shadow: compact(0 1px 5px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .yellow-box h2, .yellow-box h3 {
   color: #006084;
@@ -281,19 +278,18 @@ a.btn:hover {
   border: 1px solid #CEB480;
   color: #006084;
   font-weight: bold;
-  -webkit-box-shadow: compact(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
-  box-shadow: compact(inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
 
 .yellow-box input[type=text]:focus {
   border: 1px solid #C39502; }
 
 .yellow-box hr {
   margin: 30px 0;
-  zoom: 1;
+  *zoom: 1;
   border: none;
   border-top: 2px dashed #DCAF41; }
   .yellow-box hr:before, .yellow-box hr:after {
-    content: "";
+    content: " ";
     display: table; }
   .yellow-box hr:after {
     clear: both; }
@@ -385,8 +381,7 @@ nav.primary span:hover {
 section.focus {
   border: 1px solid #B9C7CC;
   background-color: #fff;
-  -webkit-box-shadow: compact(0 0 10px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false);
-  box-shadow: compact(0 0 10px 0 rgba(0, 0, 0, 0.2), false, false, false, false, false, false, false, false); }
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
 
 section.focus > header {
   padding: 0 30px;
@@ -404,9 +399,9 @@ section.focus > article {
   border-top: 2px solid #D9E1E4; }
 
 section.focus > article > header {
-  zoom: 1; }
+  *zoom: 1; }
   section.focus > article > header:before, section.focus > article > header:after {
-    content: "";
+    content: " ";
     display: table; }
   section.focus > article > header:after {
     clear: both; }
@@ -492,13 +487,13 @@ nav.back-and-forth li:last-child {
 
 /* Sidebar styling */
 .widget {
-  zoom: 1;
+  *zoom: 1;
   margin: 0 0 10px;
   padding: 0 0 5px 10px;
   color: #666;
   font-size: 85%; }
   .widget:before, .widget:after {
-    content: "";
+    content: " ";
     display: table; }
   .widget:after {
     clear: both; }
@@ -628,9 +623,9 @@ nav.secondary li {
 
 .da-google-adz {
   margin: 5px 0 20px;
-  zoom: 1; }
+  *zoom: 1; }
   .da-google-adz:before, .da-google-adz:after {
-    content: "";
+    content: " ";
     display: table; }
   .da-google-adz:after {
     clear: both; }
